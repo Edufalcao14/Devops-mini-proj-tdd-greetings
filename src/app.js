@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+const langages = ['fr', 'nl', 'en'];
 
 function greet(names) {
     if (names.length === 1 || names.length === 0) {
@@ -18,10 +19,17 @@ function greet(names) {
         } else {
             return 'Hello ' + names[0] + ' !';
         }
-    } else if (names.length === 2) {
-        return greet2Names(names);
-    } else {
+    } else if (names.length === 3) {
+        for (let name of names) {
+            // Vérification si la valeur est présente dans la liste des langages
+            if (langages.includes(name) && name === 'fr') {
+                const filteredNames = names.filter((name) => name !== 'fr');
+                return greet2NamesFrench(filteredNames);
+            }
+        }
         return greet3names(names);
+    } else {
+        return greet2Names(names);
     }
 }
 
@@ -33,6 +41,17 @@ function greet2Names(names) {
         return 'HELLO, ' + upperNames[1] + '!';
     } else {
         return 'Hello, ' + names[0] + ' and ' + names[1] + '.';
+    }
+}
+
+function greet2NamesFrench(names) {
+    let upperNames = names.map((name) => name.toUpperCase());
+    if (upperNames[0] === names[0]) {
+        return 'BONJOUR, ' + upperNames[0] + '!';
+    } else if (upperNames[1] === names[1]) {
+        return 'BONJOUR, ' + upperNames[1] + '!';
+    } else {
+        return 'Bonjour ' + names[0] + ' et ' + names[1] + '.';
     }
 }
 
@@ -49,16 +68,16 @@ function greet3names(names) {
         }
     });
 
-    let normalGreeting = 'Hello,';
+    let normalGreetingEnglish = 'Hello,';
 
     if (normalNames.length > 0) {
         for (let i = 0; i < normalNames.length; i++) {
             if (i === normalNames.length - 1) {
-                normalGreeting += ' and ' + normalNames[i] + '.';
+                normalGreetingEnglish += ' and ' + normalNames[i] + '.';
             } else if (i === normalNames.length - 2) {
-                normalGreeting += ' ' + normalNames[i];
+                normalGreetingEnglish += ' ' + normalNames[i];
             } else {
-                normalGreeting += ' ' + normalNames[i] + ',';
+                normalGreetingEnglish += ' ' + normalNames[i] + ',';
             }
         }
     }
@@ -66,9 +85,9 @@ function greet3names(names) {
     let upperGreeting = 'AND HELLO ' + upperNames.join('! AND HELLO ') + '!';
 
     if (normalNames.length > 0 && upperNames.length > 0) {
-        return normalGreeting + ' ' + upperGreeting;
+        return normalGreetingEnglish + ' ' + upperGreeting;
     } else if (normalNames.length > 0) {
-        return normalGreeting;
+        return normalGreetingEnglish;
     } else {
         return upperGreeting;
     }

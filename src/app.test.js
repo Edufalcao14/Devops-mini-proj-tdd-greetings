@@ -17,16 +17,21 @@ test('should return : HELLO, JERRY!', () => {
 });
 
 test('should return : Hello, Jill and Jane.', () => {
-    const result = greet(["Jill", "Jane"]);
+    const result = greet( ["Jill", "Jane"],);
     expect(result).toEqual("Hello, Jill and Jane.");
 });
 
 test('should return : Hello, Amy, Brian and Charlotte.', () => {
-    const result = greet(["Amy", "Brian","Charlotte"]);
+    const result = greet(  ["Amy", "Brian","Charlotte"],);
     expect(result).toEqual("Hello, Amy, Brian and Charlotte.");
 });
 
 test('should return : Hello, Amy, Charlotte. AND HELLO BRIAN!', () => {
-    const result = greet(["Amy", "BRIAN","Charlotte"]);
+    const result = greet(  ["Amy", "BRIAN","Charlotte"],);
     expect(result).toEqual("Hello, Amy and Charlotte. AND HELLO BRIAN!");
+});
+
+test('should return : Bonjour Amy et Charlotte.', () => {
+    const result = greet(  ["Amy", "fr","Charlotte"],);
+    expect(result).toEqual("Bonjour Amy et Charlotte.");
 });
