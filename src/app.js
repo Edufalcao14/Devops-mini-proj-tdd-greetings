@@ -20,13 +20,17 @@ function greet(names) {
         }
     }else if (names.length === 2) {
         return greet2Names(names);
-    }
+    }else
+
+    return greet3names(names);
 }
-
-
 
 function greet2Names(names) {
     return "Hello, " +  names[0] + " and " + names[1] + ".";
+}
+
+function greet3names(names){
+    return "Hello, " + names[0] + ", " + names[1] + " and " + names[2] +"."; 
 }
 
 module.exports = greet;

@@ -20,3 +20,7 @@ test('should return : Hello, Jill and Jane.', () => {
     const result = greet( ["Jill", "Jane"],);
     expect(result).toEqual("Hello, Jill and Jane.");
 });
+test('should return : Hello, Amy, Brian and Charlotte.', () => {
+    const result = greet(  ["Amy", "Brian","Charlotte"],);
+    expect(result).toEqual("Hello, Amy, Brian and Charlotte.");
+});
