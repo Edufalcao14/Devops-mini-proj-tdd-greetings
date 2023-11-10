@@ -25,6 +25,9 @@ function greet(names) {
             if (langages.includes(name) && name === 'fr') {
                 const filteredNames = names.filter((name) => name !== 'fr');
                 return greet2NamesFrench(filteredNames);
+            } else if (langages.includes(name) && name === 'nl'){
+                const filteredNames = names.filter((name) => name !== 'nl');
+                return greet2NamesNL(filteredNames);
             }
         }
         return greet3names(names);
@@ -52,6 +55,17 @@ function greet2NamesFrench(names) {
         return 'BONJOUR, ' + upperNames[1] + '!';
     } else {
         return 'Bonjour ' + names[0] + ' et ' + names[1] + '.';
+    }
+}
+
+function greet2NamesNL(names){
+    let upperNames = names.map((name) => name.toUpperCase());
+    if (upperNames[0] === names[0]) {
+        return 'HALLO, ' + upperNames[0] + '!';
+    } else if (upperNames[1] === names[1]) {
+        return 'HALLO, ' + upperNames[1] + '!';
+    } else {
+        return 'Hallo ' + names[0] + ' en ' + names[1] + '.';
     }
 }
 
