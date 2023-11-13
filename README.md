@@ -1,6 +1,5 @@
 # Devops-mini-proj-tdd-greetings
 Devops-Mini-Projet-Greetings Group 46 (Sampaio Falcao Eduardo , Simonis Tom , Tenzin Sungrab)
-# devops-01-git-wk-01
 
 ## Description
 
