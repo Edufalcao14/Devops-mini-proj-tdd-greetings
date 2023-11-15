@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 const greet = require('./app');
+const checkname = require('./app');
 
 test('should return an greet with the correct name ', () => {
     const result = greet(["Bob"]);
@@ -39,4 +40,9 @@ test('should return : Bonjour Amy et Charlotte.', () => {
 test('should return : Hallo Amy en Charlotte.', () => {
     const result = greet(  ["Amy", "nl","Charlotte"],);
     expect(result).toEqual("Hallo Amy en Charlotte.");
+});
+
+test('should return : erreur', () => {
+    const result = greet(  ["bob..//__"],);
+    expect(result).toEqual("erreur: votre nom contient des caractere special");
 });

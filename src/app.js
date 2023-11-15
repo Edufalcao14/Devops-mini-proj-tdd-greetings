@@ -11,14 +11,16 @@ function greet(names) {
         ) {
             return 'Hello, my friend.';
         }
+        const ok = Check1Name(names[0]);
+        if (ok){
+            let upperName = names[0].toUpperCase();
 
-        let upperName = names[0].toUpperCase();
-
-        if (upperName === names[0]) {
-            return 'HELLO, ' + upperName + '!';
-        } else {
-            return 'Hello ' + names[0] + ' !';
-        }
+            if (upperName === names[0]) {
+                return 'HELLO, ' + upperName + '!';
+            } else {
+                return 'Hello ' + names[0] + ' !';
+            }
+        }else return "erreur: votre nom contient des caractere special";
     } else if (names.length === 3) {
         for (let name of names) {
             // Vérification si la valeur est présente dans la liste des langages
@@ -105,6 +107,27 @@ function greet3names(names) {
     } else {
         return upperGreeting;
     }
+    
+    
+    }
+    function Check1Name(name){
+        const regex = /([a-zA-Z])\W+/g;
+        const found = name.match(regex);
+        console.log('Name:', name, 'Found:', found);
+        if (found === null || found.length===0)return true
+        return false;
+        
+    }
+
+    function CheakName2Or3 (names) {
+        const regex = /([a-zA-Z])\W+/g;
+        for (let name of names){
+            const found = name.match(regex);
+            console.log('Name:', name, 'Found:', found);
+            if (found !== true || found.length>0)
+            return false;
+        }
+        return true;
 }
 
 module.exports = greet;
