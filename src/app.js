@@ -12,7 +12,7 @@ function greet(names) {
             return 'Hello, my friend.';
         }
         const ok = Check1Name(names[0]);
-        if (ok){
+        if (ok) {
             let upperName = names[0].toUpperCase();
 
             if (upperName === names[0]) {
@@ -20,14 +20,17 @@ function greet(names) {
             } else {
                 return 'Hello ' + names[0] + ' !';
             }
-        }else return "erreur: votre nom contient des caractere special";
+        } else return 'erreur: votre nom contient des caractere special';
     } else if (names.length === 3) {
+        const ok = CheakName2Or3(names);
+        if (!ok) return 'erreur: votre nom contient des caractere special';
+
         for (let name of names) {
             // Vérification si la valeur est présente dans la liste des langages
             if (langages.includes(name) && name === 'fr') {
                 const filteredNames = names.filter((name) => name !== 'fr');
                 return greet2NamesFrench(filteredNames);
-            } else if (langages.includes(name) && name === 'nl'){
+            } else if (langages.includes(name) && name === 'nl') {
                 const filteredNames = names.filter((name) => name !== 'nl');
                 return greet2NamesNL(filteredNames);
             }
@@ -60,7 +63,7 @@ function greet2NamesFrench(names) {
     }
 }
 
-function greet2NamesNL(names){
+function greet2NamesNL(names) {
     let upperNames = names.map((name) => name.toUpperCase());
     if (upperNames[0] === names[0]) {
         return 'HALLO, ' + upperNames[0] + '!';
@@ -107,27 +110,23 @@ function greet3names(names) {
     } else {
         return upperGreeting;
     }
-    
-    
-    }
-    function Check1Name(name){
-        const regex = /([a-zA-Z])\W+/g;
+}
+function Check1Name(name) {
+    const regex = /([a-zA-Z])\W+/g;
+    const found = name.match(regex);
+    console.log('Name:', name, 'Found:', found);
+    if (found === null || found.length === 0) return true;
+    return false;
+}
+
+function CheakName2Or3(names) {
+    const regex = /([a-zA-Z])\W+/g;
+    for (let name of names) {
         const found = name.match(regex);
         console.log('Name:', name, 'Found:', found);
-        if (found === null || found.length===0)return true
-        return false;
-        
+        if (found !== null && (found.length ?? 0 > 0)) return false;
     }
-
-    function CheakName2Or3 (names) {
-        const regex = /([a-zA-Z])\W+/g;
-        for (let name of names){
-            const found = name.match(regex);
-            console.log('Name:', name, 'Found:', found);
-            if (found !== true || found.length>0)
-            return false;
-        }
-        return true;
+    return true;
 }
 
 module.exports = greet;
