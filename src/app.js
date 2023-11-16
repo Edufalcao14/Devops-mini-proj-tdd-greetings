@@ -20,10 +20,10 @@ function greet(names) {
             } else {
                 return 'Hello ' + names[0] + ' !';
             }
-        } else return 'erreur: votre nom contient des caractere special';
+        } else return 'ERROR: your name contains special characters';
     } else if (names.length === 3) {
         const ok = CheakName2Or3(names);
-        if (!ok) return 'erreur: votre nom contient des caractere special';
+        if (!ok) return 'ERROR: your name contains special characters';
 
         for (let name of names) {
             // Vérification si la valeur est présente dans la liste des langages

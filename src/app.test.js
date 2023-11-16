@@ -45,10 +45,10 @@ test('should return : Hallo Amy en Charlotte.', () => {
 
 test('should return : erreur', () => {
     const result = greet(['bob..//__']);
-    expect(result).toEqual('erreur: votre nom contient des caractere special');
+    expect(result).toEqual('ERROR: your name contains special characters');
 });
 
 test('should return : erreur 2 or 3', () => {
     const result = greet(['bob..//__', 'tenzin', 'tenin14823']);
-    expect(result).toEqual('erreur: votre nom contient des caractere special');
+    expect(result).toEqual('ERROR: your name contains special characters');
 });
