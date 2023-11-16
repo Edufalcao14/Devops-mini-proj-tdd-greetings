@@ -3,7 +3,7 @@ Devops-Mini-Projet-Greetings Group 46 (Sampaio Falcao Eduardo , Simonis Tom , Te
 
 ## Description
 
-Mini-project Devops , This mini-project is designed to start simple and become progressively more complex as new features are added, using the concepts of TDD and unit testing.
+Mini-project Devops , This mini-project is designed to start simple and become progressively more complex as new features are added, using the concepts of TDD and unit testing and feature branches git strategy.
 
 ### Prerequisites
 
