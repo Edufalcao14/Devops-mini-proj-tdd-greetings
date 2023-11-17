@@ -30,8 +30,8 @@ npm test
 Contributors names and contact info
 
 - Sampaio Falcao Eduardo Henrique
-- eduardo.sampaio@student.vinci.be
+- Eduardo.sampaio@student.vinci.be
 - Simonis Tom
 - Tom.simonis@student.vinci.be
 - Tenzin Sungrab
-- sungrab.tenzin@student.vinci.be
+- Sungrab.tenzin@student.vinci.be
