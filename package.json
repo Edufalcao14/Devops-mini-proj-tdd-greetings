@@ -12,7 +12,7 @@
     "prettier:fix": "prettier ./src/** --write",
     "test:coverage": "jest --coverage",
     "list": "ls -la",
-    "build": "webpack ./app.js -o dist/ --mode=development"
+    "build": "webpack ./src/app.js -o dist/ --mode=development"
   },
   "keywords": [
     "course"
@@ -24,9 +24,11 @@
     "eslint-config-prettier": "^9.0.0",
     "jest": "^29.7.0",
     "nodemon": "^3.0.1",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "webpack-cli": "^5.1.4",
+    "webpack": "^5.89.0"
   },
   "dependencies": {
-    "webpack": "^5.89.0"
+   
   }
 }
