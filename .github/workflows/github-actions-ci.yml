@@ -20,7 +20,7 @@ jobs:
               with:
                   node-version: '18'
             
-            -name: Install Dependencies
+            - name: Install Dependencies
               run: |
                   echo "🔧 Installing project dependencies..."
                   npm install
