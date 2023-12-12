@@ -39,7 +39,6 @@ test('should return : Bonjour Amy et Charlotte.', () => {
 
 test('should return : Hallo Amy en Charlotte.', () => {
     const result = greet(['Amy', 'nl', 'Charlotte']);
-    console.log(result);
     expect(result).toEqual('Hallo Amy en Charlotte.');
 });
 

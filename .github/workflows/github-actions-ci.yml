@@ -1,0 +1,10 @@
+name: GitHub Actions Continuous Integration 
+run-name: ${{ github.actor }} is launching the pipeline  🚀
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
