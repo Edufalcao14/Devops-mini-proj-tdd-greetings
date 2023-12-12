@@ -41,3 +41,8 @@ jobs:
               run: |
                   echo " Checking code coverage in Jest 🚨"
                   npm run test:coverage
+            
+            - name: Build the app
+              run: |
+                  echo "Building the app with webpack 🔨 "
+                  npm run build
