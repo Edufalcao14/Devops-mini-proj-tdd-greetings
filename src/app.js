@@ -114,7 +114,6 @@ function greet3names(names) {
 function Check1Name(name) {
     const regex = /([a-zA-Z])\W+/g;
     const found = name.match(regex);
-    console.log('Name:', name, 'Found:', found);
     if (found === null || found.length === 0) return true;
     return false;
 }
@@ -123,7 +122,6 @@ function CheakName2Or3(names) {
     const regex = /([a-zA-Z])\W+/g;
     for (let name of names) {
         const found = name.match(regex);
-        console.log('Name:', name, 'Found:', found);
         if (found !== null && (found.length ?? 0 > 0)) return false;
     }
     return true;
