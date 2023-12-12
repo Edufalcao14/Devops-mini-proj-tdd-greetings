@@ -10,6 +10,7 @@
     "lint:fix": "eslint --fix ./src/**",
     "prettier": "prettier ./src/** --check",
     "prettier:fix": "prettier ./src/** --write",
+    "test:coverage": "jest --coverage",
     "list": "ls -la"
   },
   "keywords": [

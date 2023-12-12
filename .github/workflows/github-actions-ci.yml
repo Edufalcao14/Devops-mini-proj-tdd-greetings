@@ -36,3 +36,8 @@ jobs:
               run: |
                   echo " Running ESLint 👀"
                   npm run lint
+
+            - name: Test Code Coverage (Jest) 
+              run: |
+                  echo " Checking code coverage in Jest 🚨"
+                  npm run test:coverage
