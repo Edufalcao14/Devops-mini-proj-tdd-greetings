@@ -1,13 +1,12 @@
-name: GitHub Actions Continuous Integration 
+name: GitHub Actions Continuous Integration
 run-name: ${{ github.actor }} is launching the pipeline  🚀
-
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
 jobs:
     Explore-GitHub-Actions:
         runs-on: ubuntu-latest
@@ -19,23 +18,19 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: '18'
-            
+
             - name: Install Dependencies
               run: |
-                  echo "🔧 Installing project dependencies..."
+                  echo " Installing project dependencies 🔧 "
                   npm install
 
             - name: Display Pipeline Start Time
               run: echo "Pipeline started at $(date) ⏰ "
 
-            - name: Running Prettier  
-              run: 
-                echo "Running Prettier 👑"
-                npm run prettier
-
-             - name: Run ESLint
-                run: 
-                  echo "Running ESLint 👀"
+            - name: Running Prettier
+              run: echo "Running Prettier 👑"
+                  npm run prettier
+              
+             - name: Running EsLint
+               run: echo "Running EsLint 👀"
                   npm run lint
-
-
