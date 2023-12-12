@@ -49,4 +49,8 @@ jobs:
 
             - name: Display end time
               run: |
-                  echo "Ending pipeline at $(date +"%H:%M:%S %Z") ⏰ "
+                  echo "Ending pipeline at $(date +"%H:%M:%S %Z") ⏰"
+            
+             - name: Success without errors
+              run: |
+                  echo "PIPELINE SUCCESS WITHOUT ERRORS"
