@@ -8,3 +8,11 @@ on:
   pull_request:
     branches:
       - main
+jobs:
+    Explore-GitHub-Actions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository code
+              uses: actions/checkout@v4
+
+              
