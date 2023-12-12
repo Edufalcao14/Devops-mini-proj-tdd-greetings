@@ -24,8 +24,11 @@ jobs:
               run: |
                   echo "🔧 Installing project dependencies..."
                   npm install
-                  
+
             - name: Display Pipeline Start Time
               run: echo "Pipeline started at $(date)"
+
+            - name: Format Code (Prettier)
+              run: npm run format
 
 
