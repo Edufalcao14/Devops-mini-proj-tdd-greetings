@@ -33,4 +33,9 @@ jobs:
                 echo "Running Prettier 👑"
                 npm run prettier
 
+             - name: Run ESLint
+              run: 
+                  echo "🔍 Running ESLint..."
+                  npm run lint
+
 
