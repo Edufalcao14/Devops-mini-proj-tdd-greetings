@@ -26,9 +26,11 @@ jobs:
                   npm install
 
             - name: Display Pipeline Start Time
-              run: echo "Pipeline started at $(date)"
+              run: echo "Pipeline started at $(date) ⏰ "
 
-            - name: Format Code (Prettier)
-              run: npm run format
+            - name: Running Prettier  
+              run: 
+                echo "Running Prettier 👑"
+                npm run prettier
 
 
