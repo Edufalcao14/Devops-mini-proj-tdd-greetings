@@ -46,3 +46,7 @@ jobs:
               run: |
                   echo "Building the app with webpack 🔨"
                   npm run build
+
+            - name: Display end time
+              run: |
+                  echo "Ending pipeline at $(date +"%H:%M:%S %Z") ⏰ "
