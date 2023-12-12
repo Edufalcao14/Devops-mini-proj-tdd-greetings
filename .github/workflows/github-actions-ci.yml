@@ -1,0 +1,34 @@
+name: GitHub Actions Continuous Integration 
+run-name: ${{ github.actor }} is launching the pipeline  🚀
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+    Explore-GitHub-Actions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository code
+              uses: actions/checkout@v4
+
+            - name: Set Up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '18'
+            
+            - name: Install Dependencies
+              run: |
+                  echo "🔧 Installing project dependencies..."
+                  npm install
+
+            - name: Display Pipeline Start Time
+              run: echo "Pipeline started at $(date)"
+
+            - name: Format Code (Prettier)
+              run: npm run format
+
+
